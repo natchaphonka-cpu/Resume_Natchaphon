@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css?v=6"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navbar -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo">RESUME</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"      class="nav-link active">HOME</a></li>
+      <li><a href="#about"     class="nav-link">ABOUT</a></li>
+      <li><a href="#projects"  class="nav-link">PROJECTS</a></li>
+      <li><a href="#skills"    class="nav-link">SKILLS</a></li>
+      <li><a href="#education" class="nav-link">EDUCATION</a></li>
+      <li><a href="#contact"   class="nav-link">CONTACT</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">LET'S TALK</a>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu (hidden by default via CSS) -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home"      class="mob-link">HOME</a>
+    <a href="#about"     class="mob-link">ABOUT</a>
+    <a href="#projects"  class="mob-link">PROJECTS</a>
+    <a href="#skills"    class="mob-link">SKILLS</a>
+    <a href="#education" class="mob-link">EDUCATION</a>
+    <a href="#contact"   class="mob-link">CONTACT</a>
+  </div>
+
+  <!-- Section Dots -->
+  <nav class="section-dots" id="sectionDots">
+    <a href="#home"      class="dot active" data-sec="home"      title="Home"></a>
+    <a href="#about"     class="dot"        data-sec="about"     title="About"></a>
+    <a href="#projects"  class="dot"        data-sec="projects"  title="Projects"></a>
+    <a href="#skills"    class="dot"        data-sec="skills"    title="Skills"></a>
+    <a href="#education" class="dot"        data-sec="education" title="Education"></a>
+    <a href="#contact"   class="dot"        data-sec="contact"   title="Contact"></a>
+  </nav>
+
+  <!-- Music Player -->
+  <div class="music-player" id="musicPlayer">
+    <div class="vinyl" id="vinyl"><div class="vinyl-dot"></div></div>
+    <div class="track-info">
+      <marquee class="track-title" id="trackTitle" scrollamount="3">JayQ - ยังไงก็เธอ feat. Z9</marquee>
+      <span class="track-sub">♪ JayQ</span>
+    </div>
+    <div class="music-controls">
+      <button class="mc-btn" id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+      <button class="mc-btn mc-play" id="playBtn"><i class="fa-solid fa-play" id="playIcon"></i></button>
+      <button class="mc-btn" id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+    </div>
+    <div class="music-bar"><div class="music-progress" id="musicProgress"></div></div>
+    <audio id="audioEl"><source src="music.mp3" type="audio/mpeg"/></audio>
+  </div>
+
+  <!-- ═══════════════════════════ HOME ═══════════════════════════ -->
+  <section class="section" id="home">
+    <div class="dot-grid"></div>
+    <div class="particles-wrap" id="particles"></div>
+
+    <div class="home-inner">
+      <!-- Left -->
+      <div class="home-left" id="homeLeft">
+        <p class="eyebrow"><span class="edot"></span> FRIENDLY NEIGHBOURHOOD DEVELOPER</p>
+        <h1 class="hello-text">HELLO, I'M</h1>
+        <div class="big-name">Natchaphon<br>Kaewteentan</div>
+        <p class="home-desc">
+          นักพัฒนาซอฟต์แวร์ที่หลงรักการเขียนโค้ด ตั้งแต่ HTML จนถึง Vue.js และ Node.js<br>
+          มุ่งมั่นสร้างเว็บไซต์ที่มีประโยชน์ต่อธุรกิจออนไลน์
+        </p>
+        <div class="status-row">
+          <span><span class="live-dot"></span> STATUS: AVAILABLE FOR WORK</span>
+          <span><i class="fa-solid fa-location-dot"></i> LOCATION: ขอนแก่น</span>
+          <span><i class="fa-solid fa-code"></i> ROLE: SOFTWARE DEVELOPER</span>
+        </div>
+        <div class="home-btns">
+          <a href="#projects" class="btn btn-red">VIEW PROJECTS <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact"  class="btn btn-outline">CONTACT ME <i class="fa-solid fa-paper-plane"></i></a>
+        </div>
+      </div>
+
+      <!-- Right – photo -->
+      <div class="home-right" id="homeRight">
+        <div class="photo-frame">
+          <img src="Noel.jpg" alt="NAT — ณัชพล"/>
+        </div>
+        <div class="photo-tags">
+          <span class="ptag">// FRONTEND</span>
+          <span class="ptag">// BACKEND</span>
+          <span class="ptag">// UI/UX</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">NEXT // <i class="fa-solid fa-chevron-down"></i></div>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <p class="eyebrow"><span class="edot"></span> GET TO KNOW ME</p>
+      <h2 class="sec-title">BEHIND THE <span class="red">WORK</span></h2>
+
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="body-text rv">
+            มีแรงบันดาลใจมาจากความชื่นชอบในการเล่นเกมและซอฟต์แวร์ต่างๆ ทำให้อยากรู้ว่าเทคโนโลยีเหล่านี้ถูกสร้างขึ้นมาได้อย่างไร จึงเริ่มฝึกเขียนโปรแกรมด้วยตนเอง
+          </p>
+          <p class="body-text rv">
+            สำเร็จการศึกษาระดับ ปวส. สาขานักพัฒนาซอฟต์แวร์ จากวิทยาลัยเทคนิคขอนแก่น ด้วย GPAX 3.86 และกำลังศึกษาต่อระดับปริญญาตรีที่ มทร.อีสาน วิทยาเขตขอนแก่น
+          </p>
+          <p class="body-text rv">
+            มุ่งมั่นสู่การเป็นนักพัฒนาที่สามารถนำเทคโนโลยีไปต่อยอดในเชิงธุรกิจ โดยเฉพาะการสร้างเว็บไซต์ E-Commerce
+          </p>
+
+          <div class="info-cards rv">
+            <div class="info-card">
+              <p class="ic-label">// EXPERIENCE</p>
+              <p class="ic-text">พัฒนาเว็บไซต์และแอปพลิเคชันมาอย่างต่อเนื่อง มีผลงานหลากหลาย</p>
+            </div>
+            <div class="info-card">
+              <p class="ic-label">// FOCUS</p>
+              <p class="ic-text">E-Commerce, Full-stack Development, Business Automation</p>
+            </div>
+          </div>
+
+          <a href="#education" class="btn btn-outline mt-2 rv">EXPLORE MORE <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+
+        <div class="about-right rv">
+          <div class="about-photo-wrap">
+            <div class="about-frame">
+              <img src="Noel.jpg" alt="NAT"/>
+            </div>
+            <div class="about-info-box">
+              <div class="ai-row"><span class="ai-lbl">ชื่อ</span><span>ณัชพล แก้วตีนแท่น</span></div>
+              <div class="ai-row"><span class="ai-lbl">ชื่อเล่น</span><span>นัท</span></div>
+              <div class="ai-row"><span class="ai-lbl">อายุ</span><span>20 ปี</span></div>
+              <div class="ai-row"><span class="ai-lbl">เกิด</span><span>6 ต.ค. 2548</span></div>
+              <div class="ai-row"><span class="ai-lbl">GPAX</span><span class="red">3.86</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="eyebrow"><span class="edot"></span> SELECTED WORK</p>
+      <h2 class="sec-title">PROJECT <span class="red">ARCHIVES</span></h2>
+      <p class="sec-sub rv">ผลงานที่พัฒนาระหว่างการศึกษาและฝึกฝนตนเอง</p>
+
+      <div class="projects-grid">
+
+        <!-- Card 1 -->
+        <div class="proj-card">
+          <div class="proj-thumb">
+            <img src="iq-room.png" alt="IQ Room"/>
+            <span class="proj-badge live">LIVE</span>
+            <span class="proj-year">// PROJECT FILE // 2567</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <div>
+                <p class="proj-meta">// PROJECT FILE // 2567</p>
+                <h3 class="proj-name">IQ Room</h3>
+              </div>
+              <a href="https://www.roblox.com/games/139132141520139/IQ-Room" target="_blank" rel="noopener" class="proj-ext"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <p class="proj-desc">เกมแนวห้องปริศนา (Escape Room) บน Roblox เพื่อฝึกทักษะด้านความคิดและการแก้ปัญหา มีระบบ Leaderboard แสดงคะแนน IQ</p>
+            <div class="proj-tags">
+              <span>Roblox</span><span>Lua</span><span>Game Dev</span>
+            </div>
+            <a href="https://www.roblox.com/games/139132141520139/IQ-Room" target="_blank" rel="noopener" class="proj-view">VIEW <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="proj-card">
+          <div class="proj-thumb">
+            <img src="noelseeker.png" alt="NoelSeeker" style="object-position:center 20%"/>
+            <span class="proj-badge live">LIVE</span>
+            <span class="proj-year">// PROJECT FILE // 2568</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <div>
+                <p class="proj-meta">// PROJECT FILE // 2568</p>
+                <h3 class="proj-name">NoelSeeker Staff</h3>
+              </div>
+              <a href="https://my-react-app-sigma-one.vercel.app/" target="_blank" rel="noopener" class="proj-ext"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <p class="proj-desc">เว็บไซต์รวบรวมและจัดการรายชื่อสมาชิก มีระบบค้นหาสมาชิก, Profile Card พร้อม Role</p>
+            <div class="proj-tags">
+              <span>React</span><span>Vercel</span><span>JavaScript</span>
+            </div>
+            <a href="https://my-react-app-sigma-one.vercel.app/" target="_blank" rel="noopener" class="proj-view">VIEW <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <p class="eyebrow center"><span class="edot"></span> WHAT I WORK WITH</p>
+      <h2 class="sec-title center">TECH <span class="red">STACK</span></h2>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="sk-col rv">
+          <h3 class="sk-head"><span class="red">//</span> FRONTEND</h3>
+          <div class="sk-item">
+            <div class="sk-row"><span>HTML5 / CSS3</span><span class="red">95%</span></div>
+            <div class="sk-bar"><div class="sk-fill" data-w="95"></div></div>
+          </div>
+          <div class="sk-item">
+            <div class="sk-row"><span>JavaScript</span><span class="red">80%</span></div>
+            <div class="sk-bar"><div class="sk-fill" data-w="80"></div></div>
+          </div>
+          <div class="sk-item">
+            <div class="sk-row"><span>Vue.js</span><span class="red">75%</span></div>
+            <div class="sk-bar"><div class="sk-fill" data-w="75"></div></div>
+          </div>
+          <div class="sk-item">
+            <div class="sk-row"><span>React</span><span class="red">65%</span></div>
+            <div class="sk-bar"><div class="sk-fill" data-w="65"></div></div>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="sk-col rv">
+          <h3 class="sk-head"><span class="red">//</span> BACKEND</h3>
+          <div class="sk-item">
+            <div class="sk-row"><span>PHP</span><span class="red">75%</span></div>
+            <div class="sk-bar"><div class="sk-fill" data-w="75"></div></div>
+          </div>
+          <div class="sk-item">
+            <div class="sk-row"><span>Node.js</span><span class="red">70%</span></div>
+            <div class="sk-bar"><div class="sk-fill" data-w="70"></div></div>
+          </div>
+          <div class="sk-item">
+            <div class="sk-row"><span>MySQL</span><span class="red">70%</span></div>
+            <div class="sk-bar"><div class="sk-fill" data-w="70"></div></div>
+          </div>
+          <div class="sk-item">
+            <div class="sk-row"><span>REST API</span><span class="red">65%</span></div>
+            <div class="sk-bar"><div class="sk-fill" data-w="65"></div></div>
+          </div>
+        </div>
+        <!-- Tools -->
+        <div class="sk-col rv">
+          <h3 class="sk-head"><span class="red">//</span> TOOLS &amp; OTHER</h3>
+          <div class="tag-wrap">
+            <span class="stag">Git</span>
+            <span class="stag">VS Code</span>
+            <span class="stag">XAMPP</span>
+            <span class="stag">Figma</span>
+            <span class="stag">Postman</span>
+            <span class="stag">npm</span>
+            <span class="stag">Vite</span>
+            <span class="stag">Bootstrap</span>
+            <span class="stag">Roblox Studio</span>
+            <span class="stag">Lua</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+  <section class="section" id="education">
+    <div class="container">
+      <p class="eyebrow"><span class="edot"></span> MY JOURNEY</p>
+      <h2 class="sec-title">EDUCATION <span class="red">HISTORY</span></h2>
+
+      <div class="timeline">
+
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <p class="tl-year">2561 – 2563</p>
+            <h3 class="tl-title">มัธยมศึกษาตอนต้น</h3>
+            <p class="tl-school">โรงเรียนบ้านดอนแดงดอนน้อยวิทยา</p>
+            <p class="tl-dept">ระดับมัธยมศึกษา</p>
+            <div class="tl-gpa"><span>GPAX</span><span class="gpa-val">3.16</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <p class="tl-year">2564 – 2566</p>
+            <h3 class="tl-title">ประกาศนียบัตรวิชาชีพ (ปวช.)</h3>
+            <p class="tl-school">วิทยาลัยเทคนิคขอนแก่น</p>
+            <p class="tl-dept">แผนกเทคโนโลยีสารสนเทศ</p>
+            <div class="tl-gpa"><span>GPAX</span><span class="gpa-val">3.97</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item rv">
+          <div class="tl-dot tl-dot-active"></div>
+          <div class="tl-card tl-card-hl">
+            <span class="tl-badge tl-badge-green">GRADUATED</span>
+            <p class="tl-year">2567 – 2568</p>
+            <h3 class="tl-title">ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</h3>
+            <p class="tl-school">วิทยาลัยเทคนิคขอนแก่น</p>
+            <p class="tl-dept">สาขานักพัฒนาซอฟต์แวร์ — แผนกเทคโนโลยีสารสนเทศ</p>
+            <div class="tl-gpa"><span>GPAX</span><span class="gpa-val red">3.86</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item rv">
+          <div class="tl-dot tl-dot-pulse"></div>
+          <div class="tl-card tl-card-hl">
+            <span class="tl-badge tl-badge-red">CURRENT</span>
+            <p class="tl-year">2569 – ปัจจุบัน</p>
+            <h3 class="tl-title">ปริญญาตรี</h3>
+            <p class="tl-school">มทร.อีสาน วิทยาเขตขอนแก่น</p>
+            <p class="tl-dept">คณะบริหารธุรกิจฯ — สาขาระบบสารสนเทศ</p>
+            <div class="tl-gpa"><span>STATUS</span><span class="gpa-val red">IN PROGRESS</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <p class="eyebrow"><span class="edot"></span> GET IN TOUCH</p>
+      <h2 class="sec-title">LET'S <span class="red">CONNECT</span></h2>
+      <p class="sec-sub rv">พร้อมรับโปรเจกต์ใหม่หรือโอกาสทำงาน ติดต่อได้เลย</p>
+
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="contact-form-wrap rv">
+          <form class="c-form" id="cform">
+            <div class="c-field">
+              <label>NAME</label>
+              <input type="text" placeholder="Your name" required/>
+            </div>
+            <div class="c-field">
+              <label>EMAIL</label>
+              <input type="email" placeholder="your@email.com" required/>
+            </div>
+            <div class="c-field">
+              <label>MESSAGE</label>
+              <textarea rows="4" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-red">SEND MESSAGE <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info rv">
+          <a class="c-row c-link" href="https://github.com/natchaphonka-cpu" target="_blank" rel="noopener">
+            <div class="c-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="c-text">
+              <p class="c-lbl">GITHUB</p>
+              <p class="c-val">natchaphonka-cpu</p>
+            </div>
+            <i class="c-arr fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <a class="c-row c-link" href="https://www.facebook.com/noel.79411?locale=th_TH" target="_blank" rel="noopener">
+            <div class="c-icon"><i class="fa-brands fa-facebook"></i></div>
+            <div class="c-text">
+              <p class="c-lbl">FACEBOOK</p>
+              <p class="c-val">Noel</p>
+            </div>
+            <i class="c-arr fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <a class="c-row c-link" href="https://www.instagram.com/leonhtuow/" target="_blank" rel="noopener">
+            <div class="c-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div class="c-text">
+              <p class="c-lbl">INSTAGRAM</p>
+              <p class="c-val">@leonhtuow</p>
+            </div>
+            <i class="c-arr fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="c-row">
+            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="c-text">
+              <p class="c-lbl">LOCATION</p>
+              <p class="c-val">ขอนแก่น, ประเทศไทย</p>
+            </div>
+          </div>
+
+          <div class="c-status">
+            <span class="status-dot"></span>
+            // PORTFOLIO SYSTEM ONLINE
+          </div>
+          <p class="c-copy">© 2026 NAT — Natchaphon Kaewteentan. All Rights Reserved.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js?v=4"></script>
+</body>
+</html>
